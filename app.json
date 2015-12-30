@@ -14,10 +14,7 @@
       "description": "Secret token, used for signing cookies",
       "generator": "secret"
     },
-    "PLATFORM": {
-      "description": "What platform this is being run on",
-      "value": "heroku"
-    }
+    "PLATFORM": "heroku"
   },
   "addons": [
     "heroku-postgresql"
