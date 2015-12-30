@@ -15,15 +15,10 @@ SECRET_KEY = 'NOT VERY SECRET'
 SHARED_OAUTH_CLIENT_ID = '84596478403-6uffc6hu8v5b6v3nh0ski5cbptl02dsd.apps.googleusercontent.com'
 SHARED_OAUTH_CLIENT_SECRET = 'R5H27t1C-9enMO9ZNfxym3Gw'
 
-PLATFORM = ''
-
 app.config.from_object(__name__)
 
 if 'DATABASE_URL' in os.environ:
   app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-
-if 'PLATFORM' in os.environ:
-  app.config['PLATFORM'] = os.environ['PLATFORM']
 
 # any instance-specific config the user wants to set, these override everything
 app.config.from_pyfile('application.cfg', silent=True)

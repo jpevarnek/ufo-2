@@ -13,8 +13,7 @@
     "SECRET_KEY": {
       "description": "Secret token, used for signing cookies",
       "generator": "secret"
-    },
-    "PLATFORM": "heroku"
+    }
   },
   "addons": [
     "heroku-postgresql"
