@@ -1,0 +1,6 @@
+{
+  "name": "ufo-management-server",
+  "dependencies": {
+    "bower": "^1.7.1"
+  }
+}
