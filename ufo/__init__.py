@@ -61,7 +61,7 @@ def setup_required(f):
   def decorated_function(*args, **kwargs):
     config = get_user_config()
     if not config.isConfigured:
-      return redirect(url_for('not_setup'))
+      return flask.redirect(flask.url_for('not_setup'))
     return f(*args, **kwargs)
   return decorated_function
 
