@@ -7,7 +7,7 @@
   "logo": "https://uproxy.org/images/uproxy_logo.svg",
   "success_url": "/setup",
   "scripts": {
-    "postdeploy": "python setup_database.py && bower install"
+    "postdeploy": "python setup_database.py && bower --config.analytics=false install"
   },
   "env": {
     "SECRET_KEY": {
