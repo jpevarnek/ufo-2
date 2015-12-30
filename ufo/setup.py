@@ -69,4 +69,4 @@ def setup():
 
   config.isConfigured = True
 
-  return redirect(url_for('setup'))
+  return flask.redirect(flask.url_for('setup'))

@@ -25,7 +25,7 @@ def getOauthFlow():
   )
 
 def getSavedCredentials():
-  credentials = getattr(g, '_credentials', None)
+  credentials = getattr(flask.g, '_credentials', None)
   if not credentials:
     config = get_user_config()
     if not config.credentials:

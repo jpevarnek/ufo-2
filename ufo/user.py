@@ -2,6 +2,7 @@ from . import app, db, setup_required
 
 import ast
 import base64
+import flask
 import google_directory_service
 import json
 import models
@@ -122,7 +123,7 @@ def add_user():
     user.email = u['primaryEmail']
     db.session.add(user)
 
-  return flask.redirect(flask.url_for('list_users'))
+  return flask.redirect(flask.url_for('user_list'))
 
 @app.route('/user/<user_id>/details')
 @setup_required
@@ -144,7 +145,7 @@ def delete_user(user_id):
 
   db.session.delete(user)
 
-  return flask.redirect(flask.url_for('users_list'))
+  return flask.redirect(flask.url_for('user_list'))
 
 @app.route('/user/<user_id>/getNewKeyPair')
 @setup_required
