@@ -14,7 +14,7 @@ class Config(db.Model):
 
   isConfigured = db.Column(db.Boolean(), default=False)
 
-  credentials = db.Column(db.String(LONG_STRING_LENGTH))
+  credentials = db.Column(db.Text())
   domain = db.Column(db.String(LONG_STRING_LENGTH))
   dv_content = db.Column(db.String(LONG_STRING_LENGTH))
 
